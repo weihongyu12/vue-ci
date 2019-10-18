@@ -15,7 +15,6 @@ unit test:
   image: node:10
   stage: test
   script:
-    - yarn install --frozen-lockfile
     - yarn test:unit
 
 e2e test:
@@ -25,8 +24,7 @@ e2e test:
     - selenium/standalone-firefox
   stage: test
   script:
-    - yarn install --frozen-lockfile
-    - yarn test:e2e -- --headless
+    - yarn test:e2e --headless
 
 deploy:
   image: alpine
