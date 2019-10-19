@@ -22,9 +22,8 @@ e2e test:chrome:
   image: node:10
   services:
     - selenium/standalone-chrome
+    alias: chrome
   stage: test
-  before_script:
-    - sleep 30
   script:
     - yarn install --frozen-lockfile
     - yarn test:e2e --env chrome --use-selenium
@@ -33,6 +32,7 @@ e2e test:firefox:
   image: node:10
   services:
     - selenium/standalone-firefox
+    alias: chrome
   stage: test
   before_script:
     - sleep 30
