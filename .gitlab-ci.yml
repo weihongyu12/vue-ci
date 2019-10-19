@@ -21,24 +21,24 @@ unit test:
 e2e test:chrome:
   image: node:10
   services:
-    - selenium/standalone-chrome
-    alias: chrome
+    - name: selenium/standalone-chrome
+      alias: chrome
   stage: test
   script:
     - yarn install --frozen-lockfile
-    - yarn test:e2e --env chrome --use-selenium
+    - yarn test:e2e --env chrome --use-selenium --headless
 
 e2e test:firefox:
   image: node:10
   services:
-    - selenium/standalone-firefox
-    alias: chrome
+    - name: selenium/standalone-firefox
+      alias: firefox
   stage: test
   before_script:
     - sleep 30
   script:
     - yarn install --frozen-lockfile
-    - yarn test:e2e --env firefox --use-selenium
+    - yarn test:e2e --env firefox --use-selenium --headless
 
 deploy:
   image: alpine
