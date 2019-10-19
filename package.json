@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --modern",
     "test:unit": "vue-cli-service test:unit",
-    "test:e2e": "vue-cli-service test:e2e --env chrome,firefox --use-selenium",
+    "test:e2e": "vue-cli-service test:e2e --env firefox --use-selenium",
     "lint": "vue-cli-service lint",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
@@ -61,8 +61,7 @@
     "yorkie": "^2.0.0"
   },
   "gitHooks": {
-    "pre-commit": "lint-staged",
-    "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    "pre-commit": "lint-staged"
   },
   "lint-staged": {
     "*.{js,vue}": [
