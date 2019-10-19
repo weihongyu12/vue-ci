@@ -23,6 +23,8 @@ e2e test:chrome:
   services:
     - selenium/standalone-chrome
   stage: test
+  before_script:
+    - sleep 30
   script:
     - yarn install --frozen-lockfile
     - yarn test:e2e --env chrome --use-selenium
@@ -32,6 +34,8 @@ e2e test:firefox:
   services:
     - selenium/standalone-firefox
   stage: test
+  before_script:
+    - sleep 30
   script:
     - yarn install --frozen-lockfile
     - yarn test:e2e --env firefox --use-selenium
