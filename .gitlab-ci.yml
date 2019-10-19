@@ -14,9 +14,8 @@ build site:
 unit test:
   image: node:10
   stage: test
-  dependencies:
-    - build
   script:
+    - yarn install --frozen-lockfile
     - yarn test:unit
 
 e2e test:chrome:
@@ -24,9 +23,8 @@ e2e test:chrome:
   services:
     - selenium/standalone-chrome
   stage: test
-  dependencies:
-    - build
   script:
+    - yarn install --frozen-lockfile
     - yarn test:e2e --env chrome --use-selenium
 
 e2e test:firefox:
@@ -34,9 +32,8 @@ e2e test:firefox:
   services:
     - selenium/standalone-firefox
   stage: test
-  dependencies:
-    - build
   script:
+    - yarn install --frozen-lockfile
     - yarn test:e2e --env firefox --use-selenium
 
 deploy:
