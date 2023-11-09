@@ -42,7 +42,7 @@
     "babel-eslint": "^10.0.3",
     "brotli-webpack-plugin": "^1.1.0",
     "chai": "^4.1.2",
-    "chromedriver": "77",
+    "chromedriver": "119",
     "compression-webpack-plugin": "^3.0.0",
     "eslint": "^6.5.1",
     "eslint-plugin-vue": "^5.2.3",
